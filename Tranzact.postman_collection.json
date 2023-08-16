@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "88efd032-3c46-4388-bc9a-3cd39076f9a3",
+		"name": "Tranzact",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19429887"
+	},
+	"item": [
+		{
+			"name": "Test Scenario 1.a",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Test for validating the response status code\r",
+							"pm.test(\"Status code is 200 OK\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test for validating the JSON response structure\r",
+							"pm.test(\"Response has valid JSON structure\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.countrylayer.com/v2/alpha/US?access_key=8111830d64abac633d4bd5019da96683",
+					"protocol": "http",
+					"host": [
+						"api",
+						"countrylayer",
+						"com"
+					],
+					"path": [
+						"v2",
+						"alpha",
+						"US"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "8111830d64abac633d4bd5019da96683"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Scenario 1.b",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Test for validating the response status code\r",
+							"pm.test(\"Status code is 200 OK\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test for validating the JSON response structure\r",
+							"pm.test(\"Response has valid JSON structure\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.countrylayer.com/v2/alpha/DE?access_key=8111830d64abac633d4bd5019da96683",
+					"protocol": "http",
+					"host": [
+						"api",
+						"countrylayer",
+						"com"
+					],
+					"path": [
+						"v2",
+						"alpha",
+						"DE"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "8111830d64abac633d4bd5019da96683"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Scenario 1.c",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Test for validating the response status code\r",
+							"pm.test(\"Status code is 200 OK\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Test for validating the JSON response structure\r",
+							"pm.test(\"Response has valid JSON structure\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.countrylayer.com/v2/alpha/GB?access_key=8111830d64abac633d4bd5019da96683",
+					"protocol": "http",
+					"host": [
+						"api",
+						"countrylayer",
+						"com"
+					],
+					"path": [
+						"v2",
+						"alpha",
+						"GB"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "8111830d64abac633d4bd5019da96683"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Scenario 2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Test for validating the response status code\r",
+							"pm.test(\"Status code is 404 Not Found\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"// Test for validating the JSON response structure\r",
+							"pm.test(\"Response has valid JSON structure\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.countrylayer.com/v2/alpha/XYZ?access_key=8111830d64abac633d4bd5019da96683",
+					"protocol": "http",
+					"host": [
+						"api",
+						"countrylayer",
+						"com"
+					],
+					"path": [
+						"v2",
+						"alpha",
+						"XYZ"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "8111830d64abac633d4bd5019da96683"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Scenario 3",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Validate the response status code\r",
+							"pm.test(\"Status code is 201 Created\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// Validate the response body content\r",
+							"pm.test(\"Response contains success message\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Country added successfully\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\": \"Test Country\",\r\n   \"alpha2code\": \"TC\",\r\n   \"alpha3code\": \"TCY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.countrylayer.com/v2/add?access_key=8111830d64abac633d4bd5019da96683",
+					"protocol": "http",
+					"host": [
+						"api",
+						"countrylayer",
+						"com"
+					],
+					"path": [
+						"v2",
+						"add"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "8111830d64abac633d4bd5019da96683"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
